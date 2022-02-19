@@ -1,12 +1,14 @@
 # SunloginRCE
 
-向日葵11.x版本RCE扫描利用程序，魔改自https://github.com/Mr-xn/sunlogin_rce
+向日葵11.x版本RCE扫描利用程序，基于fscan能力，添加了主机存活探测、网段扫描和并发优化等功能，方便安全人员在内网做漏洞检测和修复
 
 # 说明
 
-复用和适配了[fscan](https://github.com/shadow1ng/fscan)的主机存活探测、端口扫描以及IP地址解析相关代码
+代码魔改自 https://github.com/Mr-xn/sunlogin_rce 项目
 
-代码仅供测试交流，请勿用于非法活动，请遵纪守法
+复用和适配了[fscan](https://github.com/shadow1ng/fscan)的主机存活探测、端口扫描以及IP地址解析等相关代码
+
+#### 代码仅做内部安全检测使用，请勿用于非法渗透活动，请遵纪守法
 
 # 使用
 
