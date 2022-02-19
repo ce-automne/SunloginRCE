@@ -4,9 +4,9 @@
 
 # 说明
 
-代码魔改自 https://github.com/Mr-xn/sunlogin_rce 项目
+代码魔改自 https://github.com/Mr-xn/sunlogin_rce 项目，致谢  
 
-复用和适配了[fscan](https://github.com/shadow1ng/fscan)的主机存活探测、端口扫描以及IP地址解析等相关代码
+考虑到原项目没有写网段扫描的功能，于是我复用和适配了[fscan](https://github.com/shadow1ng/fscan)的主机存活探测、端口扫描以及IP地址解析等相关代码
 
 #### 代码仅做内部安全检测使用，请勿用于非法渗透活动，请遵纪守法
 
