@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"time"
 	"strings"
-	"xrkRce/find"
-	"xrkRce/rce"
-	"xrkRce/config"
+	"sunlogin/find"
+	"sunlogin/rce"
+	"sunlogin/config"
 )
 
 func init() {
@@ -17,10 +17,10 @@ func init() {
 ╚═╗│ ││││║  │ ││ ┬││││───╠╦╝│  ├┤ 0.0
 ╚═╝└─┘┘└┘╩═╝└─┘└─┘┴┘└┘   ╩╚═└─┘└─┘
 
-						    Modified by:Automne
-						    By:TRYblog
+						    Modified by: Automne
+						    By: TRYblog
 						    向日葵v11.x RCE
-适配fscan主机存活/端口扫描和IP解析代码，支持网段批量探测						
+适配fscan主机存活/端口扫描和IP解析代码，支持网段批量探测，解决中文乱码						
 ----------------------------------------------------------
 `
 	fmt.Println(logo)

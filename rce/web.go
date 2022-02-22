@@ -8,7 +8,8 @@ import (
 	"net/url"
 	"strings"
 	"time"
-	"xrkRce/config"
+	"sunlogin/config"
+	"github.com/axgle/mahonia"
 )
 
 func GetWebInfo(ip string,port string) bool { //获取指纹特征
@@ -51,6 +52,7 @@ func RunCmd(cmd string) string {
 		return ""
 	}
 	str := resp.Body()
-	body := string(str)
+	dec := mahonia.NewDecoder("gbk")
+	body := dec.ConvertString(string(str))
 	return body
 }
