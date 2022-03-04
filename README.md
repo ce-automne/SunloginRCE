@@ -16,6 +16,8 @@
 
 ③ 增加超时时间修复部分命令执行结果无回显的问题
 
+④ 添加支持扫描ip文件的代码
+
 
 # 使用
 
@@ -25,6 +27,8 @@ Usage of sunRce.exe:
         Input Cmd Command
   -h string
         IP Address: 192.168.11.11 | 192.168.11.11-255 | 192.168.11.11,192.168.11.12
+  -hf string
+        IP File: ips.txt
   -n int
         Set Scan Threads (default 600)
   -p string
