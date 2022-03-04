@@ -31,7 +31,7 @@ func main() {
 	var Info find.HostInfo
 	find.Flag(&Info)
 
-	if Info.Host != "" {
+	if Info.Host != "" || Info.HostFile != ""{
 		switch Info.Type {
 		case "scan":
 			fmt.Println("[ $ ] 扫描进行中,请稍等..")
