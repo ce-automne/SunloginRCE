@@ -26,13 +26,13 @@ type HostInfo struct {
 	Ports     string
 	Type	  string
 	Cmd	  string
+	HostFile  string
 }
 
 var(
 	NoPorts string
 	NoHosts string
-	Threads int
-	HostFile string
+	Threads int	
 )
 
 
@@ -40,17 +40,32 @@ var IsIPRange bool
 
 
 func Scan(info HostInfo) {
-	Hosts, err := ParseIP(info.Host, "", "")
-	if err != nil {
-		fmt.Println("len(hosts)==0", err)
-		return
-	}
-	//fmt.Println(Hosts)
-	if len(Hosts) > 0 {
-		Hosts = CheckLive(Hosts, false)
-		fmt.Println(Hosts)
-		PortScan(Hosts, info.Ports, 3)
-	}
+	if info.Host != ""{
+                Hosts, err := ParseIP(info.Host, "", "")
+                if err != nil {
+                        fmt.Println("len(hosts)==0", err)
+                        return
+                }
+
+                if len(Hosts) > 0 {
+                        Hosts = CheckLive(Hosts, false)
+                        fmt.Println(Hosts)
+                        PortScan(Hosts, info.Ports, 3)
+                }
+
+        }else if info.HostFile != ""{
+                Hosts, err := ParseIP("", info.HostFile, "")
+                if err != nil {
+                        fmt.Println("len(hosts)==0", err)
+                        return
+                }
+
+                if len(Hosts) > 0 {
+                        Hosts = CheckLive(Hosts, false)
+                        fmt.Println(Hosts)
+                        PortScan(Hosts, info.Ports, 3)
+                }
+        }
 }
 
 
